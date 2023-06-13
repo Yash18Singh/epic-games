@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/layout/Sidebar/Sidebar';
 import Sidecontent from './components/layout/Sidecontent/Sidecontent';
 
@@ -20,11 +20,11 @@ function App() {
         <div className={styles.App}>
           <Sidebar />
           <Sidecontent>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/store" component={Store} />
-              <Route exact path="/library" component={Library} />
-            </Switch>
+            <Routes>
+              <Route exact path="/" element={<Home/>} />
+              <Route exact path="/store" element={<Store/>} />
+              <Route exact path="/library" element={<Library/>} />
+            </Routes>
           </Sidecontent>
         </div>
       </Router>
