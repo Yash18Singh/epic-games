@@ -1,0 +1,108 @@
+.sidebarWrapper {
+    position: relative;
+    padding: 0 1.5em 2em 3em;
+    width: 13rem;
+    font-size: .8rem;
+}
+
+.sidebar {
+    padding-top: 3em;
+    position: fixed;
+    white-space: nowrap;
+    height: 100%;
+    width: 13rem;
+    border-right: var(--bg-color4) solid 1px;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 968px) {
+    .sidebar-wrapper {
+        display: none;
+    }
+}
+
+.sidebar .icon, svg {
+    width: 20px;
+    height: 20px;
+    filter: invert(70%);
+}
+
+.iconStore {
+    background: url(https://www.svgrepo.com/show/105540/label.svg);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.brand a {
+    text-decoration: none;
+    color: var(--color1);
+    margin-left: 1.5em;
+}
+
+.sidebar li {
+    margin-bottom: 3em;
+    position: relative;
+    display: block;
+}
+
+.sidebar li:hover a {
+    color: white;
+}
+
+.sidebar li:hover :is(span, svg, img) {
+    filter: invert(100%);
+}
+
+.sidebar .current {
+    color: white;
+}
+
+.sidebar .current .icon {
+    filter: invert(100%);
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--color2);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sidebar li :is(img, svg, span) {
+    transition: 0.2s;
+    margin-right: 2.5em;
+    margin-left: 5px;
+}
+
+
+.sidebar .profile::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: olive;
+    border-radius: 50%;
+    top: -5px;
+    left: 1.8em;
+    position: absolute;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 88%;
+}

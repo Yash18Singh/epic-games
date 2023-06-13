@@ -1,0 +1,168 @@
+.Friendlist {
+    position: fixed;
+    background: var(--bg-color4);
+    border: var(--color2) solid 2px;
+    border-radius: 10px;
+    width: 350px;
+    z-index: 999;
+    right: 2em;
+}
+
+.wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 8fr 1fr;
+}
+
+.upper {
+    position: relative;
+    padding: 0 1.5em 1.5em;    
+}
+
+.Friendlist input[type="radio"] {
+    position: fixed;
+    opacity: 0;
+    width: 0;
+}
+
+.clear {
+    position: absolute;
+    right: 3em;
+    margin: 0;
+    padding: 0;
+    color: var(--color3);
+    font-weight: bold;
+    font-size: .8rem;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    align-self: center;
+}
+
+.toggleMenu {
+    background: rgb(34, 34, 34);
+    border-radius: 50px;
+    margin: 1.5em auto;
+    width: fit-content;
+    padding: 0.8em 0.4em;
+    white-space: nowrap;
+}
+
+.Friendlist label {
+    padding: .5em 2.5em;
+    cursor: pointer;
+    color: var(--color2);
+    transition: 0.2s;
+}
+
+.Friendlist label:hover {
+    color: rgb(172, 172, 172);
+}
+
+.Friendlist input[type="radio"]:checked + label {
+    background-color: rgb(68, 68, 68);
+    border-radius: 15px;
+    color: white;
+}
+
+.search {
+    display: flex;
+    margin: 0 0 1em;
+}
+
+.SearchInput {
+    border: var(--bg-color5) solid;
+    border-width: 1px;
+    font-weight: bold;
+    color: var(--color2);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0.8em;
+    width: 100%;
+    background: transparent;
+    outline: none;
+}
+
+.SearchInput:focus, .SearchInput:focus + .searchBtn {
+    border-color: #fff;
+    transition: 0.4s;
+}
+
+.SearchInput::placeholder {
+    color: var(--color2);
+}
+
+.searchBtn {
+    position: absolute;
+    right: 3em;
+    align-self: center;
+    height: 25px;
+    width: 25px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icons {
+    position: relative;
+    text-align: right;
+    margin-top: 1em;
+    height: 1em;
+}
+
+.icon {
+    cursor: pointer;
+    margin-left: 1em;
+    display: inline-block;
+    filter: invert(100%);
+    height: 15px;
+    width: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+.iconBell {
+    animation: bellRing 1s;
+}
+
+@keyframes bellRing {
+    0% { transform: rotate(25deg); }
+    25% { transform: rotate(-25deg)}
+    50% { transform: rotate(25deg)}
+    75% { transform: rotate(-25deg);}
+    100% { transform: rotate(0deg); }
+}
+
+.connect {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    background: var(--bg-color4);
+    padding: .5em 3em 0;
+    margin: 0 2px;
+    text-align: left;
+    border-top: var(--color2) solid 1px;
+    font-size: 12px;
+    width: 100%;
+    left: 0;
+    bottom: 2px;
+}
+
+.connect p {
+    width: 90%;
+}
+
+.connect a {
+    color: white;
+}
+
+@media only screen and (max-width: 968px) {
+    .Friendlist {
+        display: none;
+    }
+}
