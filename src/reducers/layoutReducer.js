@@ -11,7 +11,7 @@ const initialState = {
     displayFriendlist: false,
     displayDownloads: false,
     user: {
-        username: 'AykutSrch',
+        username: 'Yashwant',
         status: 'online',
         color: 'darkviolet'
     },
